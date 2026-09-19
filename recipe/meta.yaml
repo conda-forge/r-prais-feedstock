@@ -1,4 +1,4 @@
-{% set version = "1.1.4" %}
+{% set version = "1.2.0" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/prais_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/prais/prais_{{ version }}.tar.gz
-  sha256: 7a06e6e9fb1ab302cd7c7774ea590a2188d9987100e5f5c49d2b95e1b3df3e25
+  sha256: d16e040963293a8315bee6071db6041a1c74a52268a3f5902f7cfcdb10a73f8f
 
 build:
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -41,7 +41,8 @@ test:
 about:
   home: https://github.com/franzmohr/prais
   license: GPL-2.0-only
-  summary: The Prais-Winsten estimator (Prais & Winsten, 1954) takes into account AR(1) serial correlation of the errors in a linear regression model. The procedure recursively estimates the coefficients and the error autocorrelation of the specified model until sufficient convergence of the AR(1) coefficient is attained.
+  summary: The Prais-Winsten estimator (Prais & Winsten, 1954) takes into account AR(1) serial correlation of the errors in a linear regression model. The procedure recursively estimates the coefficients and the error autocorrelation of the specified model until sufficient convergence of the AR(1) coefficient is 
+    attained.
   license_family: GPL2
   license_file:
     - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
